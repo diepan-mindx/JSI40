@@ -1,3 +1,16 @@
+import { auth, db } from "./firebase_config.js";
+import { createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-auth.js";
+import {
+  collection,
+  query,
+  where,
+  getDocs,
+  addDoc,
+  or,
+  getDoc,
+} from "https://www.gstatic.com/firebasejs/12.6.0/firebase-firestore.js";
+import { User } from "./entities.js";
+
 // =================================================
 // login
 
@@ -27,13 +40,14 @@ function validateSignupForm(email, username, password, confirmPassword) {
   return true;
 }
 
-signupForm.addEventListener("submit", () => {
+signupForm.addEventListener("submit", async (event) => {
+  event.preventDefault();
   // ---------------------------------------
   // validate form
-  const username = signupForm.getElementById("signupUsername");
-  const email = signupForm.getElementById("signupEmail");
-  const password = signupForm.getElementById("signupPassword");
-  const confirmPassword = signupForm.getElementById("signupConfirmPassword");
+  const username = document.getElementById("signupUsername");
+  const email = document.getElementById("signupEmail");
+  const password = document.getElementById("signupPassword");
+  const confirmPassword = document.getElementById("signupConfirmPassword");
   if (
     validateSignupForm(
       username.value,
@@ -44,8 +58,52 @@ signupForm.addEventListener("submit", () => {
   ) {
     // --------------------------------------
     // kiem tra khong duoc trung email + username cu
+    // su dung cau lenh query de lay du lieu user co email/ username trung lap
+    const q = query(
+      collection(db, "users"),
+      or(
+        where("username", "==", username.value),
+        where("email", "==", email.value)
+      )
+    );
+    let isDuplicated = false;
+    const querySnapshot = await getDocs(q);
+
+    querySnapshot.forEach((doc) => {
+      // doc.data() is never undefined for query doc snapshots
+      console.log(doc.id, " => ", doc.data());
+      // neu trung -> khong lam tiep
+      isDuplicated = true;
+    });
+    if (isDuplicated) {
+      alert("Email hoặc Username đã được đăng kí, vui lòng đăng nhập!");
+      return; // dung ham khong lam them
+    }
 
     // --------------------------------------
-    // create account with firebase
+    // create account with firebase auth
+    createUserWithEmailAndPassword(auth, email.value, password.value)
+      .then(async (userCredential) => {
+        // Signed up
+        const user = userCredential.user;
+        // --------------------------------------
+        // create account with firebase firestore
+        const newUser = new User(username.value, email.value, user.uid);
+
+        // Add a new document with a generated id.
+        const docRef = await addDoc(collection(db, "users"), newUser.toObject());
+        console.log("Document written with ID: ", docRef.id);
+        // luu vao local storage
+        localStorage.setItem("currentUser", user.uid);
+        // thong bao dang ki thanh cong -> chuyen sang home
+        alert("Đăng kí tài khoản thành công!");
+        location.href = "../index.html";
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        // ...
+        console.error(errorMessage);
+      });
   }
 });
