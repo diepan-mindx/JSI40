@@ -1,5 +1,8 @@
 import { auth, db } from "./firebase_config.js";
-import { createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-auth.js";
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+} from "https://www.gstatic.com/firebasejs/12.6.0/firebase-auth.js";
 import {
   collection,
   query,
@@ -12,7 +15,39 @@ import {
 import { User } from "./entities.js";
 
 // =================================================
+// neu da dang nhap thi chuyen ve trang home
+let currentUserUID = localStorage.getItem("currentUser");
+if (currentUserUID) {
+  window.location.href = "../index.html";
+}
+
+// =================================================
 // login
+const loginForm = document.getElementById("signin-form");
+loginForm.addEventListener("submit", async (event) => {
+  event.preventDefault();
+  const email = document.getElementById("loginEmail").value.trim();
+  const password = document.getElementById("loginPassword").value.trim();
+  // sign in with firebase auth
+  signInWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      // Signed in
+      const user = userCredential.user;
+      // luu vao local storage
+      localStorage.setItem("currentUser", user.uid);
+      // thong bao dang nhap thanh cong -> chuyen sang home
+      alert("Đăng nhập thành công!");
+      // xoa task luu tam de load lai
+      localStorage.removeItem("tasks");
+      location.href = "../index.html";
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      alert("Đăng nhập thất bại! Vui lòng kiểm tra lại email và mật khẩu.");
+      console.error(errorMessage);
+    });
+});
 
 // =================================================
 // signup
@@ -91,12 +126,17 @@ signupForm.addEventListener("submit", async (event) => {
         const newUser = new User(username.value, email.value, user.uid);
 
         // Add a new document with a generated id.
-        const docRef = await addDoc(collection(db, "users"), newUser.toObject());
+        const docRef = await addDoc(
+          collection(db, "users"),
+          newUser.toObject()
+        );
         console.log("Document written with ID: ", docRef.id);
         // luu vao local storage
         localStorage.setItem("currentUser", user.uid);
         // thong bao dang ki thanh cong -> chuyen sang home
         alert("Đăng kí tài khoản thành công!");
+        // xoa task luu tam de load lai
+        localStorage.removeItem("tasks");
         location.href = "../index.html";
       })
       .catch((error) => {

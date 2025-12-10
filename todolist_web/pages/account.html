@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link
+      rel="shortcut icon"
+      href="https://i.pinimg.com/originals/91/1e/b1/911eb1f2cff48f9a4179835007eb7fbd.gif"
+      type="image/x-icon"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      .list-group-item {
+        border: none !important;
+      }
+    </style>
+  </head>
+  <body data-bs-theme="light">
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#" id="home-link">Todolist</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" href="#" id="home-link-2">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="account-link">Account</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="d-flex justify-content-center mt-5 px-5 flex-wrap gap-3">
+      <div class="card" style="max-width: 800px; min-width: 400px">
+        <img
+          id="account-img"
+          src="https://i.pinimg.com/originals/ff/5c/31/ff5c316b30f4dc0a744cf9dc986f6f55.jpg"
+          class="card-img-top mx-auto"
+          alt="..."
+          style="
+            height: 300px;
+            width: auto;
+            object-fit: cover;
+            object-position: center;
+          "
+        />
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item border-0">
+              <strong>Username: </strong>
+              <span id="account-username">username</span>
+            </li>
+            <li class="list-group-item border-0">
+              <strong>UID: </strong> <span id="account-uid">uid</span>
+            </li>
+            <li class="list-group-item border-0">
+              <strong>Email: </strong> <span id="account-email">email</span>
+            </li>
+          </ul>
+          <a href="#" class="btn btn-danger mt-3" id="logout-btn">Logout</a>
+        </div>
+      </div>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="../js/nav.js"></script>
+    <script type="module" src="../js/account.js"></script>
+  </body>
+</html>

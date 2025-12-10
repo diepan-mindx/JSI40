@@ -1,7 +1,6 @@
 // =================================================
 // kiem tra neu nguoi dung chua dang nhap -> chuyen trang
 let currentUserUID = localStorage.getItem("currentUser");
-console.log(currentUserUID);
 if (!currentUserUID) {
   window.location.href = "./pages/login.html";
 }

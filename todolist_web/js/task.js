@@ -108,6 +108,16 @@ ul?.addEventListener("click", async (event) => {
       // cap nhat giao dien
       li.classList.add("bg-secondary", "text-white");
       event.target.disabled = true;
+      // cap nhat lai localStorage
+      const taskStored = localStorage.getItem("tasks");
+      let tasks = taskStored ? JSON.parse(taskStored) : [];
+      tasks = tasks.map((task) => {
+        if (task.$taskId === taskId) {
+          task.$isCompleted = true;
+        }
+        return task;
+      });
+      localStorage.setItem("tasks", JSON.stringify(tasks));
     } catch (error) {
       console.error("Error updating document: ", error);
       alert("Có lỗi xảy ra khi cập nhật công việc.");
@@ -132,6 +142,11 @@ document
         await deleteDoc(taskRef);
         // cap nhat giao dien
         li.remove();
+        // cap nhat lai localStorage
+        const taskStored = localStorage.getItem("tasks");
+        let tasks = taskStored ? JSON.parse(taskStored) : [];
+        tasks = tasks.filter((task) => task.$taskId !== taskId);
+        localStorage.setItem("tasks", JSON.stringify(tasks));
       } catch (error) {
         console.error("Error deleting document: ", error);
         alert("Có lỗi xảy ra khi xóa công việc.");
