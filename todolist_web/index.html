@@ -38,7 +38,6 @@
               <a class="nav-link active" href="#" id="home-link-2">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" id="login-link">Login</a>
               <a class="nav-link" href="#" id="account-link">Account</a>
             </li>
           </ul>
@@ -46,7 +45,21 @@
       </div>
     </nav>
 
-    <main></main>
+    <main class="d-flex justify-content-center mt-5 px-5">
+      <div class="card" style="width: 100%">
+        <div class="card-header">Todo List</div>
+        <ul class="list-group list-group-flush" id="todolist">
+          <li class="list-group-item bg-secondary text-white">
+            Task 1 <button class="btn btn-primary" disabled>Done</button>
+            <button class="btn btn-danger">Del</button>
+          </li>
+          <li class="list-group-item">
+            Task 1 <button class="btn btn-primary">Done</button>
+            <button class="btn btn-danger">Del</button>
+          </li>
+        </ul>
+      </div>
+    </main>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
