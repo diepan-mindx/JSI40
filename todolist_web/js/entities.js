@@ -20,6 +20,34 @@ class User {
     };
   }
 }
+//====================================
+class Task {
+  constructor(taskContent, createdBy, isCompleted = false ) {
+    this.$taskContent = taskContent;
+    this.$isCompleted = isCompleted;
+    this.$createdBy = createdBy;
+  }
+
+  toObject() {
+    return {
+      taskContent: this.$taskContent,
+      createdBy: this.$createdBy,
+      isCompleted: this.$isCompleted,
+    };
+  }
+
+  toHTMLElement() {
+    const li = `<li class="list-group-item ${
+      this.$isCompleted ? "bg-secondary text-white" : ""
+    }">
+            ${this.$taskContent} <button class="btn btn-primary" ${
+      this.$isCompleted ? "disabled" : ""
+    }>Done</button>
+            <button class="btn btn-danger">Del</button>
+          </li>`;
+    return li;
+  }
+}
 
 //====================================
-export { User };
+export { User, Task };
