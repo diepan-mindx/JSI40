@@ -46,19 +46,12 @@
     </nav>
 
     <main class="d-flex justify-content-center mt-5 px-5 flex-wrap gap-3">
-      <div class="w-100"><button class="btn btn-primary" id="add_task">+ Add task</button></div>
+      <div class="w-100">
+        <button class="btn btn-primary" id="add_task">+ Add task</button>
+      </div>
       <div class="card" style="width: 100%">
         <div class="card-header">Todo List</div>
-        <ul class="list-group list-group-flush" id="todolist">
-          <li class="list-group-item bg-secondary text-white">
-            Task 1 <button class="btn btn-primary" disabled>Done</button>
-            <button class="btn btn-danger">Del</button>
-          </li>
-          <li class="list-group-item">
-            Task 1 <button class="btn btn-primary">Done</button>
-            <button class="btn btn-danger">Del</button>
-          </li>
-        </ul>
+        <ul class="list-group list-group-flush" id="todolist"></ul>
       </div>
     </main>
     <script
@@ -66,6 +59,7 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
-    <script type="module" src="./js/account.js"></script>
+    <script type="module" src="./js/nav.js"></script>
+    <script type="module" src="./js/task.js"></script>
   </body>
 </html>

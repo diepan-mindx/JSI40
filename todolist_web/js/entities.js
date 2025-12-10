@@ -22,7 +22,8 @@ class User {
 }
 //====================================
 class Task {
-  constructor(taskContent, createdBy, isCompleted = false ) {
+  constructor(taskId = "", taskContent, createdBy, isCompleted = false) {
+    this.$taskId = taskId;
     this.$taskContent = taskContent;
     this.$isCompleted = isCompleted;
     this.$createdBy = createdBy;
@@ -39,10 +40,11 @@ class Task {
   toHTMLElement() {
     const li = `<li class="list-group-item ${
       this.$isCompleted ? "bg-secondary text-white" : ""
-    }">
-            ${this.$taskContent} <button class="btn btn-primary" ${
-      this.$isCompleted ? "disabled" : ""
-    }>Done</button>
+    }" id="${this.$taskId}">
+            ${this.$taskContent} 
+            <button class="btn btn-primary" ${
+              this.$isCompleted ? "disabled" : ""
+            }>Done</button>
             <button class="btn btn-danger">Del</button>
           </li>`;
     return li;
