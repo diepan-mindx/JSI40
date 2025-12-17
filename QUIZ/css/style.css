@@ -1,0 +1,132 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  background: url(https://i.pinimg.com/originals/b4/58/1d/b4581df9e47ce538d21555c94f75da95.gif);
+  background-size: cover;
+}
+
+.card {
+  width: 420px;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(6px);
+  border-radius: 20px;
+  padding: 28px 26px 30px;
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.15);
+}
+
+.title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #0b8f8a;
+  margin-bottom: 22px;
+}
+
+.score-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.score-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  background: #e6f4f3;
+  border-radius: 14px;
+  font-size: 16px;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.04);
+}
+
+.name {
+  color: #5a2bd8;
+  font-weight: 600;
+}
+
+.points {
+  color: #35c9cf;
+  font-weight: 700;
+}
+
+.card {
+  width: 380px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  color: #2aa198;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.progress {
+  font-weight: 600;
+}
+
+.question {
+  margin: 20px 0 24px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #2aa198;
+  text-align: center;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border: 2px solid #6bc4bd;
+  border-radius: 12px;
+  margin-bottom: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.option:hover {
+  background: #e9f7f6;
+}
+
+.badge {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: #6bc4bd;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.option span {
+  font-size: 15px;
+  color: #333;
+  font-weight: 500;
+}
+
+.option.correct {
+  border-color: #4caf50;
+  background: #e8f5e9;
+}
+
+.option.incorrect {
+  border-color: #f44336;
+  background: #ffebee;
+}

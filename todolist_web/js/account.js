@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       collection(db, "users"),
       where("uid", "==", currentUserUID)
     );
+
     const querySnapshot = await getDocs(q);
     // chuyen task JSON -> class Task
     if (querySnapshot.empty) {
