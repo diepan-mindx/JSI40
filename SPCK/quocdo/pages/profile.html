@@ -1,0 +1,51 @@
+<!doctype html>
+
+<html lang="en" class="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+
+    <link rel="stylesheet" href="../css/profile.css" />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <div class="header">
+      <a href="../index.html">Trang chủ</a>
+      <div class="header-right">
+        <button id="themeToggle">Dark Mode</button>
+      </div>
+    </div>
+
+    <!-- PROFILE CARD -->
+    <div class="profile-container">
+      <!-- AVATAR -->
+      <div class="avatar-box">
+        <img
+          id="photoPreview"
+          src="https://inkythuatso.com/uploads/thumbnails/800/2023/03/10-anh-dai-dien-trang-inkythuatso-03-15-27-10.jpg"
+          alt="avatar"
+        />
+
+        <input type="text" id="photoURL" placeholder="Photo URL..." />
+      </div>
+
+      <!-- USER INFO -->
+      <div class="info-box">
+        <label>Username</label>
+        <input type="text" id="username" />
+
+        <label>Email (không thể sửa)</label>
+        <input type="text" id="email" disabled />
+
+        <label>WCA ID</label>
+        <input type="text" id="wcaid" placeholder="VD: 2025NGUY01" />
+
+        <button id="saveProfile">Lưu thay đổi</button>
+      </div>
+    </div>
+
+    <script type="module" src="../js/profile.js"></script>
+  </body>
+</html>

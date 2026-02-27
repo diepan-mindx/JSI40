@@ -1,0 +1,97 @@
+*{
+    font-family: monospace;
+}
+html, body{
+    background-color: #121212;
+}
+.main-window{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 95vh;
+    gap: 20px;
+}
+#chat-window{
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    border: solid #8e8e8e 1px;
+    background-color: #333;
+    color: #fff;
+    height: 70vh;
+    width: 1400px;
+    margin-top: 40px;
+    border-radius: 15px;
+    padding: 15px;
+}
+.btn{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+#user-input{
+    display: flex;
+    width: 1100px;
+    height: 30px;
+    border-radius: 15px;
+    padding-left: 15px;
+    font-size: large;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    box-shadow: #555 0px 3px 0px 0px;
+}
+#send-btn{
+    display: flex;
+    width: 60px;
+    height: 35px;
+    border-radius: 15px;
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    box-shadow: #444 0px 1px 0px 0px;
+    cursor: pointer;
+    transition: all ease-in-out 0.3s;
+}
+#send-btn:hover{
+    scale: 1.05;
+    background-color: #444;
+}
+.message {
+  max-width: 70%;
+  padding: 10px 14px;
+  margin: 6px 0;
+  border-radius: 12px;
+  word-wrap: break-word;
+  line-height: 1.4;
+}
+
+/* Tin nhắn người dùng */
+.user-msg {
+  align-self: flex-end;
+  background-color: #4a90e2;
+  color: #fff;
+  border-bottom-right-radius: 4px;
+}
+
+/* Tin nhắn AI */
+.ai-msg {
+  align-self: flex-start;
+  background-color: #555;
+  color: #fff;
+  border-bottom-left-radius: 4px;
+}
+a{
+    display: flex;
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    margin:auto;
+    transition:  ease-in-out 0.3s;
+}
+a:hover{
+    scale: 1.01;
+    color: rgb(123, 149, 234);
+}

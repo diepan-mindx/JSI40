@@ -22,3 +22,4 @@ if (location.href.includes("pages/")) {
 for (const id in links) {
   document.querySelector(`#${id}`).href = links[id];
 }
+

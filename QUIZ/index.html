@@ -3,37 +3,106 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-
+    <title>QUIZ</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
-  <body>
-    <div class="quiz-container">
-      <h1 class="title">QUICK QUIZ</h1>
-
-      <div class="form-group">
-        <label>Select Category</label>
-        <select>
-          <option>Any Category</option>
-          <option>Science</option>
-          <option>History</option>
-          <option>Music</option>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label>Select Difficulty</label>
-        <select>
-          <option>Easy</option>
-          <option>Medium</option>
-          <option>Hard</option>
-        </select>
-      </div>
-
-      <div class="button-group">
-        <button class="btn btn-play">PLAY</button>
-        <button class="btn btn-highscores">HIGHSCORES</button>
-      </div>
+  <body class="light">
+    <div class="loading">
+      <div class="circle"></div>
+      <div class="circle"></div>
     </div>
+    <nav class="hide">
+      <a href="#">Quiz</a>
+      <div class="right-nav-items">
+        <button id="theme-toggle">
+          <i id="dark" class="fa-solid fa-moon hide"></i>
+          <i id="light" class="fa-solid fa-sun"></i>
+        </button>
+      </div>
+    </nav>
+
+    <main class="hide">
+      <div class="left container">
+        <form id="choose-quiz" action="./pages/game.html" method="GET">
+          <div class="title">Choose Your Quiz</div>
+          <div class="sub-text">
+            Choose the language you want to review with the level, this tool
+            will help you random 10 questions (1 question/ 60 seconds). Enjoy
+            your quiz!
+          </div>
+          <div class="avatar"></div>
+          <input
+            type="text"
+            name="username"
+            id="username"
+            placeholder="Enter your name"
+            required
+          />
+          <select name="type" id="quiz-types">
+            <option value="none">Choose language</option>
+            <option value="Python">Python</option>
+            <option value="Javascript">Javascript</option>
+            <option value="HTML">HTML</option>
+            <option value="CSS">CSS</option>
+          </select>
+
+          <select name="level" id="quiz-levels">
+            <option value="none">Choose level</option>
+            <option value="Easy">Easy</option>
+            <option value="Medium">Medium</option>
+            <option value="Hard">Hard</option>
+          </select>
+          <button type="submit">Start Quiz</button>
+        </form>
+      </div>
+
+      <div class="right container">
+        <div id="leader-board">
+          <div class="title">LEADERBOARD</div>
+          <div class="no-data hide">
+            No data to show, make a new record now!
+          </div>
+          <div class="card">
+            <span class="ranking">1</span>
+            <span class="username">abc</span>
+            <span class="score">100</span>
+          </div>
+
+          <div class="card">
+            <span class="ranking">1</span>
+            <span class="username">abc</span>
+            <span class="score">100</span>
+          </div>
+
+          <div class="card">
+            <span class="ranking">10</span>
+            <span class="username">abc</span>
+            <span class="score">100</span>
+          </div>
+
+          <div class="card">
+            <span class="ranking">10</span>
+            <span class="username">abc</span>
+            <span class="score">100</span>
+          </div>
+
+          <div class="card">
+            <span class="ranking">10</span>
+            <span class="username">abc</span>
+            <span class="score">100</span>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="./js/nav.js"></script>
+    <script type="module" src="./js/highscore.js"></script>
   </body>
 </html>

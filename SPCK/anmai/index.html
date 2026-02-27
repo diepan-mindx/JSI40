@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Genshin Impact</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+
+  <body>
+    <!-- nav -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="./index.html">
+          <img
+            src="https://i.pinimg.com/736x/2d/46/54/2d4654800dd4e73c17649930e56ee8a3.jpg"
+            alt=""
+            style="width: 50px"
+          />
+          Genshin Impact
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <!-- Menu trái -->
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./pages/characters.html">Characters</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./pages/weapons.html">Weapons</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./pages/blog.html">Blog</a>
+            </li>
+          </ul>
+
+          <!-- Menu phải -->
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" id="login-btn" href="./pages/login.html"
+                >Login</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="logout-btn" href="#">Logout</a>
+            </li>
+            <li class="nav-item d-none" id="account-link">
+              <a
+                class="nav-link"
+                href="#"
+                id="account-name"
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- header -->
+    <header class="hot_news container-fluid p-5">
+      <div class="row w-100 mt-5 g-3">
+        <!-- Card 1 -->
+        <div class="col-lg-4 col-sm-12">
+          <div class="card h-100">
+            <a
+              href="https://genshin.hoyoverse.com/vi/news/detail/161573"
+              class="news_title ellipsis"
+              style="text-decoration: none"
+              target="_blank"
+            >
+              <img
+                src="https://fastcdn.hoyoverse.com/content-v2/hk4e/161573/b98a942ab50fa933be7dd2f9a0f382ad_918934544840478309.jpg"
+                class="card-img-top img-fluid"
+                alt=""
+              />
+              <div class="card-body text-center text-white">
+                <h5 class="card-title ellipsis-multiline">
+                  Sự Kiện Web "Bữa Tiệc Kỳ Vực Tuyết Phủ!" - Nhiệm Vụ "Thử Thách Tiệc Tùng" Đã Cập Nhật Hạn Giờ!
+                </h5>
+                <p class="card-text mt-2">
+
+                </p>
+                <p class="card-text text-end text-secondary">21/12/2025</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-lg-4 col-sm-12">
+          <div class="card h-100">
+            <a
+              href="https://genshin.hoyoverse.com/vi/news/detail/157207"
+              class="news_title ellipsis"
+              style="text-decoration: none"
+              target="_blank"
+            >
+              <img
+                src="https://fastcdn.hoyoverse.com/content-v2/hk4e/161415/4747d37887e06c0f85ac4aee06135aa8_7297635338335453717.jpg"
+                class="card-img-top img-fluid"
+                alt="HoYo FEST 2025"
+              />
+              <div class="card-body text-center text-white">
+                <h5 class="card-title ellipsis-multiline">
+                  [Genshin Impact] Hoạt Cảnh - Nơi Vầng Trăng Trở Về
+                </h5>
+                <p class="card-text mt-2">
+                  Ánh trăng dẫn lối về nhà trải dài trước mặt Columbina, nhưng cô vẫn không thể bước lên con đường ấy...
+                </p>
+                <p class="card-text text-end text-secondary">12/12/2025</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-lg-4 col-sm-12">
+          <div class="card h-100">
+            <a
+              href="https://genshin.hoyoverse.com/vi/news/detail/156892"
+              class="news_title ellipsis"
+              style="text-decoration: none"
+              target="_blank"
+            >
+              <img
+                src="https://fastcdn.hoyoverse.com/content-v2/hk4e/161404/51f3d33d60cf74616e9302ffe41a1bb7_7618245661470035212.jpg"
+                class="card-img-top img-fluid"
+                alt="Skirk Event"
+              />
+              <div class="card-body text-center text-white">
+                <h5 class="card-title ellipsis-multiline">
+                  [Genshin Impact] Hoạt Cảnh - Đêm Cầu Nguyệt
+                </h5>
+                <p class="card-text mt-2">
+                  Đêm Cầu Nguyệt diễn ra như dự kiến, nhưng lần này lại đón thêm một vị khách đặc biệt.
+                </p>
+                <p class="card-text text-end text-secondary">12/12/2025</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="container-fluid px-5 py-2">
+      <div
+        class="button-group d-flex justify-content-start flex-wrap gap-3 mb-4 mt-3"
+      >
+        <button class="custom-btn active">Mới</button>
+        <button class="custom-btn">Thông tin</button>
+        <button class="custom-btn">Bản Tin</button>
+        <button class="custom-btn">Sự Kiện</button>
+      </div>
+      <div class="news" id="news">
+        <!-- Card 1 -->
+        <div class="card mb-3" style="border: none; border-radius: 10px">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img
+                src="https://fastcdn.hoyoverse.com/content-v2/hk4e/161530/e879ab16f86f2fb7425683406ec2a836_7558087384428584772.jpg"
+                class="img-fluid rounded-start"
+                alt="Bản Tin Sự Kiện"
+              />
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title ellipsis-multiline mb-2">
+                  <a
+                    href="https://genshin.hoyoverse.com/vi/news/detail/161530"
+                    style="text-decoration: none; color: inherit"
+                    >"Lịch Trình Riêng" Của Thợ Rèn Vạn Năng - UP Xác Suất "Lửa Nung Đúc Hồn - Xilonen (Nham)"!</a
+                  >
+                </h5>
+                <p class="card-text text-muted" style="font-size: 14px">
+                  Nhà Lữ Hành thân mến! Sự kiện cầu nguyện "Chúc Phúc Lửa Rèn" sẽ được mở vào 23/12. Tỷ lệ nhận được "Lửa Nung Đúc Hồn - Xilonen (Nham)" sẽ tăng mạnh!
+                </p>
+                <p class="card-text">
+                  <small class="text-secondary">21/12/2025</small>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card mb-3" style="border: none; border-radius: 10px">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img
+                src="https://fastcdn.hoyoverse.com/content-v2/hk4e/161573/b98a942ab50fa933be7dd2f9a0f382ad_918934544840478309.jpg"
+                class="img-fluid rounded-start"
+                alt="Thông Báo Sự Kiện"
+              />
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title ellipsis-multiline mb-2">
+                  <a
+                    href="https://genshin.hoyoverse.com/vi/news/detail/161573"
+                    style="text-decoration: none; color: inherit"
+                    >Sự Kiện Web "Bữa Tiệc Kỳ Vực Tuyết Phủ!" - Nhiệm Vụ "Thử Thách Tiệc Tùng" Đã Cập Nhật Hạn Giờ!</a
+                  >
+                </h5>
+                <p class="card-text text-muted" style="font-size: 14px">
+                  
+                </p>
+                <p class="card-text">
+                  <small class="text-secondary">21/12/2025</small>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card mb-3" style="border: none; border-radius: 10px">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img
+                src="https://fastcdn.hoyoverse.com/content-v2/hk4e/161528/762e86a172e0ee0bfdf8bb2436b23a16_7392773634590210710.jpg"
+                class="img-fluid rounded-start"
+                alt="Hình Nền Lịch"
+              />
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title ellipsis-multiline mb-2">
+                  <a
+                    href="https://genshin.hoyoverse.com/vi/news/detail/161528"
+                    style="text-decoration: none; color: inherit"
+                    >UP Xác Suất Sức Mạnh Nhàn Nhã - Varesa (Lôi) Ung Dung Thong Thả!</a
+                  >
+                </h5>
+                <p class="card-text text-muted" style="font-size: 14px">
+                  Nhà Lữ Hành thân mến! Sự kiện cầu nguyện "Cặp Sừng Giác Đấu" sẽ bắt đầu vào 23/12 - Xác suất nhận được "Sức Mạnh Nhàn Nhã - Varesa (Lôi)" sẽ tăng mạnh!
+                </p>
+                <p class="card-text">
+                  <small class="text-secondary">20/12/2025</small>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="card mb-3" style="border: none; border-radius: 10px">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img
+                src="https://fastcdn.hoyoverse.com/content-v2/hk4e/161545/c7608c712c38ff09639261a45a407f40_4145052714828722929.jpg"
+                class="img-fluid rounded-start"
+                alt="Hoạt Cảnh - Tất Cả Chỉ Liên Quan Đến Chúng Ta"
+              />
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title ellipsis-multiline mb-2">
+                  <a
+                    href="https://genshin.hoyoverse.com/vi/news/detail/161545"
+                    style="text-decoration: none; color: inherit"
+                    >Bản Tin Sự Kiện Phiên Bản Luna III "Thơ Dạ Hành Cực Bắc" - Kỳ 2</a
+                  >
+                </h5>
+                <p class="card-text text-muted" style="font-size: 14px">
+                  Xin chào Nhà Lữ Hành, hãy cùng xem những sự kiện sắp mở trong thời gian tới nhé!
+                </p>
+                <p class="card-text">
+                  <small class="text-secondary">18/12/2025</small>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="card mb-3" style="border: none; border-radius: 10px">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img
+                src="https://fastcdn.hoyoverse.com/content-v2/hk4e/161521/e5536d994a8a6ed692f1be3e98eab021_1478891654043851044.jpg"
+                class="img-fluid rounded-start"
+                alt="Tàn Ảnh Tai Họa"
+              />
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title ellipsis-multiline mb-2">
+                  <a
+                    href="https://genshin.hoyoverse.com/vi/news/detail/161521"
+                    style="text-decoration: none; color: inherit"
+                    >Thông Báo Sự Kiện Cầu Nguyện Phiên Bản "Luna III" Kỳ 2</a
+                  >
+                </h5>
+                <p class="card-text text-muted" style="font-size: 14px">
+                  Cầu Nguyện "Cặp Sừng Giác Đấu": UP Xác Suất Sức Mạnh Nhàn Nhã - Varesa (Lôi)!
+                </p>
+                <p class="card-text">
+                  <small class="text-secondary">18/12/2025</small>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button class="custom-btn w-100">Tải Thêm</button>
+    </main>
+
+    <!-- footer -->
+      <footer class="container-fluid px-5 py-3 bg-dark text-light">
+        <div class="d-flex justify-content-center align-items-center gap-5 py-3 flex-wrap">
+          <a href="https://x.com/GenshinImpact" target="_blank">
+            <img src="https://i.pinimg.com/736x/c8/d3/d4/c8d3d4d12a8ea35b58e35de9ec820a22.jpg" style="width:50px">
+          </a>
+      
+          <a href="https://www.tiktok.com/@genshin_impact_vn" target="_blank">
+            <img src="https://i.pinimg.com/736x/56/10/10/561010059c22fce9f550ba905d896656.jpg" style="width:40px">
+          </a>
+      
+          <a href="https://www.youtube.com/@GenshinImpact/" target="_blank">
+            <img src="https://i.pinimg.com/736x/31/23/9a/31239a2f70e4f8e4e3263fafb00ace1c.jpg" style="width:50px">
+          </a>
+      
+          <a href="https://www.facebook.com/GenshinImpact.vi/" target="_blank">
+            <img src="https://i.pinimg.com/736x/49/85/8c/49858c2f8fd687109529545db2388aa5.jpg" style="width:50px">
+          </a>
+      
+          <a href="https://www.reddit.com/r/Genshin_Impact/" target="_blank">
+            <img src="https://i.pinimg.com/736x/9a/eb/49/9aeb49f8bbe3d7bc93159195355e80d8.jpg" style="width:55px">
+          </a>
+        </div>
+  
+        <div class="text-center mt-3">
+          <p>
+            Theo dõi thông tin chính thức của Genshin Impact để cập nhật những tin
+            tức mới nhất, thông tin nhân vật và phúc lợi sự kiện hạn giờ từ
+            Paimon.
+          </p>
+        </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+
+    <script type="module" src="./js/nav.js"></script>
+  </body>
+</html>

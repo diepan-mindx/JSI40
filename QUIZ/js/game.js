@@ -24,3 +24,20 @@ async function addData() {
 }
 
 // addData();
+
+// ================================================
+// create 10 questions from question list from firestore (shuffle questions / query sql find by categories prop)
+// get request data from url: 
+
+// =================================================
+// skip question -> 0 score
+document.getElementById("skip-btn")?.addEventListener("click", )
+
+// =================================================
+// answer (if continous right ans -> next ques will + 10 * number of right continous questions)
+// default 10 score for 1 question
+// if incorrect, no add score 
+// 60s for each question -> auto change when overtime
+
+// =================================================
+// Change leaderboard if needed
